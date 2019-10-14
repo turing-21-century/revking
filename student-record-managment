@@ -1,0 +1,11 @@
+n=[]
+m=[]
+n=[]
+x=input()
+n.append(input())
+max=int(m[j])
+pos=j
+if(max<int(m[i])):
+max=int(m[i])
+pos=i 
+print(r)
