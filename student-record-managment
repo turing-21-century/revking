@@ -1,11 +1,20 @@
 n=[]
 m=[]
-n=[]
+nn=[]
+nm=[]
 x=input()
-n.append(input())
-max=int(m[j])
-pos=j
-if(max<int(m[i])):
-max=int(m[i])
-pos=i 
+for i in range(4):
+    m.append(input())
+    n.append(input())
+for j in range(4):
+    max=int(m[j])
+    pos=j
+    for i in range(4):
+        if(max<int(m[i])):
+            max=int(m[i])
+            pos=i
+    nn.append(n[pos])
+    nm.append(m[pos])
+    m[pos]=0
+r={nm[0]:nn[0],nm[1]:nn[1],nm[2]:nn[2],nm[3]:nn[3]}
 print(r)
