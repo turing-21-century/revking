@@ -1,0 +1,18 @@
+def check(h):
+    if (h == '|' or h == '<' or h == '>' or h == '?' or h == ',' or h == '.' or h=='_'): fl = 1
+    return fl
+def ma():
+    for x in f:
+        if(x.find('@')=-1):continue
+        if(x.find('.')=-1):continue
+        l=x[0:i]
+        d=x[i+1:j]
+        e=x[j+1:len(x)]
+        for h in range(len(e)):
+            if(check(e[h]==1)):
+                f=1
+                break
+        if (d.isnumeric()): f = 1
+        if(len(l)>64):f=1
+        if(f==1):print(x)
+
