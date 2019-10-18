@@ -1,1 +1,20 @@
-program to find mini max
+x = list(map(int, input().split()))
+y=[]
+y.append(int(x[0]))
+y.append(int(x[1]))
+y.append(int(x[2]))
+y.append((x[3]))
+y.append((x[4]))
+r=[]
+r.append(y[0]+y[2]+y[3]+y[4])
+r.append(y[0]+y[1]+y[3]+y[4])
+r.append(y[0]+y[2]+y[1]+y[4])
+r.append(y[0]+y[2]+y[3]+y[1])
+r.append(y[1]+y[2]+y[3]+y[4])
+min=r[0]
+max=r[0]
+for h in range(5):
+    if(min>r[h]):min=r[h]
+    elif(max<r[h]):max=r[h]
+print(str(min)+" "+str(max))
+
