@@ -1,1 +1,17 @@
-program to check for png files
+def secret_images():
+    p=b=j=0
+    f=open('secret images.txt','r')
+    for x in f:
+        if(x.isnumeric()):continue
+        y=0
+        for u in range(len(x)):
+            if(x[u]=='.'):y=u
+        if(x[y+1]=='p'):p+=1
+        elif(x[y+1]=='b'):b+=1
+        elif(x[y+1]=='j'):j+=1
+        y=0
+    print(p)
+    print(b)
+    print(j)
+if __name__=="__main__":
+    secret_images()
