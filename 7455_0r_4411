@@ -1,1 +1,36 @@
-program to check if sudent passes or fails
+print("enter no: of students and subjects")
+m=int(input())
+n=int(input())
+l=[]
+av=[]
+r=[]
+f=0
+arr=[[0 for x in range(n)] for y in range(m)]
+for i in range(m):
+    av.append(0)
+    for j in range(n):
+        arr[i][j]=int(input())
+        if(f==0 and arr[i][j]<40):
+            print(arr[i][j])
+            l.append(str(i))
+            f=1
+            arr[i][j]=0
+    av[i] = av[i] + arr[i][j]
+    f=0
+print("list of failures")
+for i in range(len(l)):
+    print(l[i])
+for i in range(len(av)):
+    if(av[i]!=0):
+        max=av[i]
+        pos=i
+        for j in range(len(av)):
+            if(max<av[j]):
+                av[j]=max
+                pos=j
+        r.append(pos)
+        av[pos]=0
+print("Rank List")
+for i in range(len(r)):
+    print(r[i])
+
